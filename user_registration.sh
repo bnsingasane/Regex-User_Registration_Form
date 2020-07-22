@@ -62,11 +62,16 @@ passpat2="^([a-z0-9@#!]*)[A-Z]+([a-z0-9@#!]*)$";
 if [[ $password =~ $passpat1   ]]
 then
 	if [[ $password =~ $passpat2  ]]
-	then
-  		echo "Perfect password"
+  	then
+     		if [[ $password =~ $passpat3  ]]
+     		then
+        		echo "Perfect password"
+     		else
+       			echo "Please enter at least one digit";
+     		fi
   	else
     		echo "Please enter at least one caps letter";
-  	fi
+ 	 fi
 else
 	echo "Your password should be of 8 length";
 fi
