@@ -57,11 +57,11 @@ fi
 read  "Enter password"
 read password
 
-passpat1="^([a-zA-Z0-9@#!]){8}$";
-passpat2="^([a-z0-9@#!]*)[A-Z]+([a-z0-9@#!]*)$";
-if [[ $password =~ $passpat1   ]]
+passpattern1="^([a-zA-Z0-9@#!]){8}$";
+passpattern2="^([a-z0-9@#!]*)[A-Z]+([a-z0-9@#!]*)$";
+if [[ $password =~ $passpattern1   ]]
 then
-	if [[ $password =~ $passpat2  ]]
+	if [[ $password =~ $passpattern2  ]]
 	then
   		echo "Perfect password"
   	else
