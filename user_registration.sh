@@ -39,3 +39,16 @@ then
 else
         echo "Invalid Email ID"
 fi
+
+#enter valid mobile number
+echo "Enter your Mobile Number:"
+read mobileno
+
+mobilepat="^[0-9]{2}\s[0-9]{10}$"
+
+if [[ $mobilenno =~ $mobilepat ]]
+then
+       echo "Valid Mobile Number"
+else
+       echo "Invalid Mobile Number"
+fi
