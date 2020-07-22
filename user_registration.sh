@@ -1,14 +1,15 @@
 #!/bin/bash -x
+#!/bin/bash -x 
 
-#enter a valid First Name
-echo "Enter the First Name:"
-read firstname
+#enter a valid Last Name
+echo "Enter the Last Name:"
+read lastname
 
-fnamepattern="^[A-Z]{1}[a-z]{2,}$"
+lnamepattern="^[A-Z]{1}[a-z]{2,}$"
 
-if [[ $firstname =~ $fnamepattern ]]
+if [[ $lastname =~ $lnamepattern ]]
 then
-       echo "Valid Firstname"
+        echo "Valid Lastname"
 else
-       echo "Invalid Firstname"
+        echo "Invalid Lastname"
 fi
