@@ -52,3 +52,15 @@ then
 else
        echo "Invalid Mobile Number"
 fi
+
+#validating password which includes minimum 8 characters
+read  "Enter password"
+read password
+
+passpat1="^([a-zA-Z0-9@#!]){8}$";
+if [[ $password =~ $passpat1   ]]
+then
+        echo "Perfect password"
+else
+	echo "Your password should be of 8 length";
+fi
