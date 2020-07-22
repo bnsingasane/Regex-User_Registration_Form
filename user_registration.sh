@@ -12,3 +12,16 @@ then
 else
        echo "Invalid Firstname"
 fi
+
+#enter a valid Last Name
+echo "Enter the Last Name:"
+read lastname
+
+lnamepattern="^[A-Z]{1}[a-z]{2,}$"
+
+if [[ $lastname =~ $lnamepattern ]]
+then
+        echo "Valid Lastname"
+else
+        echo "Invalid Lastname"
+fi
